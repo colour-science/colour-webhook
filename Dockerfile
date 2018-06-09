@@ -1,20 +1,18 @@
-FROM golang:alpine3.7
+FROM golang:alpine
 
 WORKDIR /go/src/github.com/adnanh/webhook
 
 ENV PACKAGE webhook
 ENV VERSION 2.6.8
+ENV URL https://github.com/adnanh/${PACKAGE}/archive/${VERSION}.tar.gz
 
 RUN apk add --update -t build-deps curl gcc libc-dev libgcc
-RUN curl -L -o ${PACKAGE}.tar.gz https://github.com/adnanh/${PACKAGE}/archive/${VERSION}.tar.gz && \
+RUN curl -L -o ${PACKAGE}.tar.gz ${URL} && \
     tar -xzf ${PACKAGE}.tar.gz --strip 1 &&  \
     go get -d && \
-    go build -o /usr/local/bin/${PACKAGE} && \
-    apk del --purge build-deps && \
-    rm -rf /var/cache/apk/* && \
-    rm -rf /go
+    go build -o /usr/local/bin/${PACKAGE}
 
-FROM alpine:3.7
+FROM alpine
 
 RUN apk add --update bash git && \
     rm -rf /var/cache/apk/*
