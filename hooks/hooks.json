@@ -1,6 +1,6 @@
 [{
     "id": "colour-science.org",
-    "execute-command": "/etc/webhook/commands/colour-science.org.sh",
+    "execute-command": "/etc/colour-webhook/commands/colour-science.org.sh",
     "command-working-directory": "/mnt/colour-science.org",
     "response-message": "\"colour-science.org\" webhook payload received!",
     "response-headers": [{

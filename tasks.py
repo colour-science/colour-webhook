@@ -158,14 +158,14 @@ def docker_run(ctx):
             '--name={1} '
             '-e GITHUB_WEBHOOK_SECRET=$GITHUB_WEBHOOK_SECRET '
             '-p 9010:9000 '
-            '-v {2}:/etc/webhook/hooks '
-            '-v {3}:/etc/webhook/commands '
+            '-v {2}:/etc/colour-webhook/hooks '
+            '-v {3}:/etc/colour-webhook/commands '
             '-v {4}:/mnt/colour-science.org '
             '{0}/{1} '
             '-verbose '
             '-hotreload '
             '-template '
-            '-hooks=/etc/webhook/hooks/hooks.json '.format(
+            '-hooks=/etc/colour-webhook/hooks/hooks.json '.format(
                 ORG, CONTAINER, os.path.abspath('hooks'),
                 os.path.abspath('commands'),
                 os.path.abspath(os.path.join('..', 'colour-science.org'))))

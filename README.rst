@@ -26,13 +26,13 @@ Run
     --name=colour-webhook \
     -e GITHUB_WEBHOOK_SECRET=$GITHUB_WEBHOOK_SECRET \
     -p 9010:9000 \
-    -v /hooks:/etc/webhook/hooks \
-    -v /commands:/etc/webhook/commands \
+    -v /hooks:/etc/colour-webhook/hooks \
+    -v /commands:/etc/colour-webhook/commands \
     -v /colour-science.org:/mnt/colour-science.org \
     colourscience/colour-webhook:latest \
     -verbose \
     -hotreload \
-    -hooks=/etc/webhook/hooks/hooks.json
+    -hooks=/etc/colour-webhook/hooks/hooks.json
 
 Development
 -----------
