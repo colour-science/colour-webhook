@@ -1,0 +1,20 @@
+[{
+    "id": "colour-science.org",
+    "execute-command": "/etc/webhook/commands/colour-science.org.sh",
+    "command-working-directory": "/mnt/colour-science.org",
+    "response-message": "\"colour-science.org\" webhook payload received!",
+    "response-headers": [{
+        "name": "Access-Control-Allow-Origin",
+        "value": "*"
+    }],
+    "trigger-rule": {
+        "match": {
+            "type": "payload-hash-sha1",
+            "secret": "{{ getenv "GITHUB_WEBHOOK_SECRET" }}",
+            "parameter": {
+                "source": "header",
+                "name": "X-Hub-Signature"
+            }
+        }
+    }
+}]
