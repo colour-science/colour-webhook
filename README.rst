@@ -4,8 +4,8 @@ Colour - Webhook
 Introduction
 ------------
 
-Various `webhook <https://github.com/adnanh/webhook>`_ resources for use with
-`colour-science.org <https://github.com/colour-science/colour-science.org>`_.
+Various `webhook <https://github.com/adnanh/webhook>`__ resources for use with
+`colour-science.org <https://github.com/colour-science/colour-science.org>`__.
 
 Installation
 ------------
@@ -47,13 +47,13 @@ Development
 Code of Conduct
 ---------------
 
-The *Code of Conduct*, adapted from the `Contributor Covenant 1.4 <https://www.contributor-covenant.org/version/1/4/code-of-conduct.html>`_,
-is available on the `Code of Conduct <https://www.colour-science.org/code-of-conduct/>`_ page.
+The *Code of Conduct*, adapted from the `Contributor Covenant 1.4 <https://www.contributor-covenant.org/version/1/4/code-of-conduct.html>`__,
+is available on the `Code of Conduct <https://www.colour-science.org/code-of-conduct/>`__ page.
 
 About
 -----
 
 | **Colour - Webhook** by Colour Developers
-| Copyright © 2018-2019 – Colour Developers – `colour-science@googlegroups.com <colour-science@googlegroups.com>`_
+| Copyright © 2018-2019 – Colour Developers – `colour-science@googlegroups.com <colour-science@googlegroups.com>`__
 | This software is released under terms of New BSD License: https://opensource.org/licenses/BSD-3-Clause
-| `https://github.com/colour-science/colour-webhook <https://github.com/colour-science/colour-webhook>`_
+| `https://github.com/colour-science/colour-webhook <https://github.com/colour-science/colour-webhook>`__
