@@ -57,6 +57,7 @@ def clean(ctx, bytecode=False):
     patterns = []
 
     if bytecode:
+        patterns.append('**/__pycache__')
         patterns.append('**/*.pyc')
 
     for pattern in patterns:
@@ -64,7 +65,7 @@ def clean(ctx, bytecode=False):
 
 
 @task
-def formatting(ctx, yapf=False):
+def formatting(ctx, yapf=True):
     """
     Formats the codebase with *Yapf*.
 
